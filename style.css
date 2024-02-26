@@ -339,3 +339,50 @@ html {
     text-align: center;
     font-size: 50px;
 }
+
+/* Pricing */
+.pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pricing_sectionTitle{
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+.pricing_list{
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pricing_separator{
+    width: 600px;
+    margin: 45px 0 20px;
+}
+
+.pricing_specification{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.pricing_icon{
+    position: absolute;
+    z-index: -1;
+}
+
+.price_salescolud{
+    top: 19px;
+    left: 287px;
+}
+
+.price_certification{
+    top: 237px;
+    left: 1388px;
+    width: 289px;
+}

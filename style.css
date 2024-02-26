@@ -347,10 +347,11 @@ html {
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 600px;
 }
 
 .pricing_sectionTitle{
-    margin: 20px 0;
+    margin-bottom: 30px;
     font-size: 40px;
 }
 
@@ -377,12 +378,13 @@ html {
 }
 
 .price_salescolud{
-    top: 19px;
-    left: 287px;
+    top: 20px;
+    left: 330px;
+    width: 175px;
 }
 
 .price_certification{
-    top: 237px;
+    top: 300px;
     left: 1388px;
     width: 289px;
 }

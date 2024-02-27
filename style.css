@@ -346,7 +346,6 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     height: 600px;
 }
 
@@ -372,20 +371,25 @@ html {
     margin-bottom: 15px;
 }
 
+.pricing_icons{
+    position: relative;
+}
+
 .pricing_icon{
     position: absolute;
+    top: 10px;
     z-index: -1;
 }
 
 .price_salescolud{
-    top: 20px;
-    left: 330px;
+    top: -396px;
+    left: -303px;
     width: 175px;
 }
 
 .price_certification{
-    top: 300px;
-    left: 1388px;
+    top: -116px;
+    left: 712px;
     width: 289px;
 }
 
@@ -468,6 +472,11 @@ html {
     margin-top: 10px;
     padding-left: 30px;
     flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    max-height: 500px;
+
+    transition: height 0.5s, max-height 2s;
 }
 
 .subElementList{
@@ -485,8 +494,9 @@ html {
 
 .hidden{
     height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 
@@ -524,3 +534,104 @@ html {
 		transform: translatey(-50%) rotate(90deg);
 	}	
 }
+
+
+
+/* TEST */
+
+.container {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+  }
+  
+  .accordion {
+    .accordion-item {
+      border-bottom: 1px solid $lightgray;
+      button[aria-expanded='true'] {
+        border-bottom: 1px solid $blue;
+      }
+    }
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: $text;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      &:hover, &:focus {
+        cursor: pointer;
+        color: $blue;
+        &::after {
+          cursor: pointer;
+          color: $blue;
+          border: 1px solid $blue;
+        }
+      }
+      .accordion-title {
+        padding: 1em 1.5em 1em 0;
+      }
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
+      }
+    }
+
+    button[aria-expanded='true'] {
+      color: $blue;
+      .icon {
+        &::after {
+          width: 0;
+        }
+      }
+      + .accordion-content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
+    }
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 2em 0;
+      }
+    }
+  }

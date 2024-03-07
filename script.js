@@ -30,6 +30,25 @@ document.querySelectorAll('.elementSection').forEach(item => {
     });
 });
 
+function sendEmail() {
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "a.d.tsyganova@gmail.com", 
+        Password : "12345", 
+        To : 'a.d.tsyganova@gmail.com', 
+        From : document.getElementById('Email').value,
+        Subject : "New Contact Form message",
+        Body : "Name: " + document.getElementById('Name').value + "<br>" +
+               "Email: " + document.getElementById('Email').value + "<br>" +
+               "Phone: " + document.getElementById('Phone').value
+    }).then(
+        message => alert(message)
+    );
+}
+
+
+
+
 // document.querySelectorAll('.elementSection').forEach(item => {
 //     item.addEventListener('click', function() {
 //       const plus = this.querySelector('.elementPlus');

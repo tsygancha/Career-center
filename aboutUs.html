@@ -28,35 +28,40 @@
             </div>
         </div>
         <div class="contactUsForm" id="contactUsSection">
-            <div class="contactUs_Section">
-                <div class="contactUs_Title">Contact Us</div>
-                <div class="contactUs_Subtitle">If you have any questions, please don't hesitate to contact us. We'll get back to you as soon as possible.</div>
-                <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="4ecc26ee-fc57-48d5-bc95-fe5454afaef9">
-                    <div class="contactUs_Input">
-                        <div class="contactUs_Form">
-                            <img class="inputFotm_img" src="/image/contactName.png" alt="">
-                            <input id="Name" name="name" required maxlength="80" placeholder="Name" class="contactUs_Name contactUs_InputForm" type="text">
+            <div class="contactUsElement">
+                <div class="contactUs_Section">
+                    <div class="contactUs_Title">Contact Us</div>
+                    <div class="contactUs_Subtitle">If you have any questions, please don't hesitate to contact us. We'll get back to you as soon as possible.</div>
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="4ecc26ee-fc57-48d5-bc95-fe5454afaef9">
+                        <div class="contactUs_Input">
+                            <div class="contactUs_Form">
+                                <img class="inputFotm_img" src="/image/contactName.png" alt="">
+                                <input id="Name" name="name" required maxlength="80" placeholder="Name" class="contactUs_Name contactUs_InputForm" type="text">
+                            </div>
+                            <div class="contactUs_Form">
+                                <img class="inputFotm_img" src="/image/ContactEmail.png" alt="">
+                                <input id="Email" name="email" required maxlength="80" placeholder="Email" class="contactUs_Email contactUs_InputForm" type="text">
+                            </div>
+                            <div class="contactUs_Form">
+                                <img class="inputFotm_img" src="/image/ContactNumber.png" alt="">
+                                <input id="Phone" name="Phone" required maxlength="80" placeholder="Phone" class="contactUs_Phone contactUs_InputForm" type="text">
+                            </div>
                         </div>
-                        <div class="contactUs_Form">
-                            <img class="inputFotm_img" src="/image/ContactEmail.png" alt="">
-                            <input id="Email" name="email" required maxlength="80" placeholder="Email" class="contactUs_Email contactUs_InputForm" type="text">
-                        </div>
-                        <div class="contactUs_Form">
-                            <img class="inputFotm_img" src="/image/ContactNumber.png" alt="">
-                            <input id="Phone" name="Phone" required maxlength="80" placeholder="Phone" class="contactUs_Phone contactUs_InputForm" type="text">
-                        </div>
-                    </div>
-                    <button type="submit" class="contactUs_button" onsubmit="sendInfo">Contact Us</button>
-                </form>
+                        <button id="submitButton" type="submit" class="contactUs_button">Contact Us</button>
+                    </form>
+                </div>
+                <div class="thanksSection">
+                    <div class="tick">✔</div>
+                    <div class="thanksText">Thank you we will get in touch shortly!</div>
+                </div>        
             </div>
-            <div>
-                <img class="contactUs_img" src="/image/ContactUsIcon.png" alt="Contact Us Icon">
-            </div>
+            <img class="contactUs_img" src="/image/ContactUsIcon.png" alt="Contact Us Icon">
         </div>
         <div class="footer">
             <div class="footerContent">©IBVCloud 2024</div>
         </div>
     </div>
+    <script src="/script.js"></script>
 </body>
 </html>

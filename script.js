@@ -30,21 +30,76 @@ document.querySelectorAll('.elementSection').forEach(item => {
     });
 });
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-// document.querySelectorAll('.elementSection').forEach(item => {
-//     item.addEventListener('click', function() {
-//       const plus = this.querySelector('.elementPlus');
-//       if (plus) {
-//         plus.classList.toggle('active');
-//       }
-      
-//       const content = this.nextElementSibling;
-//       if (content.classList.contains('hidden')) {
-//         content.classList.remove('hidden');
-//         setTimeout(() => content.style.height = content.scrollHeight + "px", 0);
-//       } else {
-//         content.style.height = "0px";
-//         setTimeout(() => content.classList.add('hidden'), 150);
-//       }
+    // Початок відправлення даних
+    const formData = new FormData(this); 
+    const contactUsSection = document.querySelector('.contactUs_Section');
+    const thanksSection = document.querySelector('.thanksSection');
+
+    fetch(this.action, {
+        method: this.method,
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json(); 
+    })
+    .then(data => {
+        console.log("Form submitted successfully", data);
+        clearForm();
+
+        contactUsSection.classList.add('hide');
+        thanksSection.classList.add('show');
+
+        setTimeout(() => {
+            contactUsSection.classList.remove('hide');
+            thanksSection.classList.remove('show');
+        }, 2000);
+
+    })
+    .catch(error => {
+        console.error("Error submitting form:", error);
+    });
+});
+
+function clearForm() {
+    document.getElementById("Name").value = "";
+    document.getElementById("Email").value = "";
+    document.getElementById("Phone").value = "";
+}
+
+
+// document.getElementById("contactForm").addEventListener("submit", function(event) {
+//     event.preventDefault();
+
+//     const formData = new FormData(this); 
+
+//     fetch(this.action, {
+//         method: this.method,
+//         body: formData
+//     })
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error("Network response was not ok");
+//         }
+//         return response.json(); 
+//     })
+//     .then(data => {
+//         console.log("Form submitted successfully", data);
+        
+//         clearForm(); 
+//     })
+//     .catch(error => {
+//         console.error("Error submitting form:", error);
 //     });
-//   });
+// });
+
+// function clearForm() {
+//     document.getElementById("Name").value = "";
+//     document.getElementById("Email").value = "";
+//     document.getElementById("Phone").value = "";
+// }

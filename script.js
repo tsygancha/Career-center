@@ -81,27 +81,77 @@ function clearForm() {
 // });
 
 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const toggleButton = document.querySelector('.sideMenu_toogleOpenSideMenu');
+//     let scrollPosition = 0; // Зберігаємо позицію скролу
+
+//     toggleButton.addEventListener('click', function() {
+//         const body = document.body;
+//         const sideMenu = document.querySelector('.sideMenu_header');
+//         sideMenu.classList.toggle('hide');
+
+//         if (!sideMenu.classList.contains('hide')) {
+//             scrollPosition = window.pageYOffset; // Зберігаємо поточну позицію скролу
+//             body.style.overflow = 'hidden'; // Вимикаємо скрол
+//             body.style.position = 'fixed'; // Забороняємо скролінг, але зберігаємо можливість "тапу" по екрану
+//             body.style.top = `-${scrollPosition}px`; // Зберігаємо позицію скролу
+//             body.style.width = '100%'; // Забезпечуємо, що ширина body не змінюється
+//         } else {
+//             body.style.removeProperty('overflow');
+//             body.style.removeProperty('position');
+//             body.style.removeProperty('top');
+//             body.style.removeProperty('width');
+//             window.scrollTo(0, scrollPosition); // Відновлюємо позицію скролу
+//         }
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.querySelector('.sideMenu_toogleOpenSideMenu');
-    let scrollPosition = 0; // Зберігаємо позицію скролу
+    const contactUsLink = document.querySelector('.sideMenu_header_navigationMenu .contact_us'); // Посилання Contact Us у боковому меню
 
-    toggleButton.addEventListener('click', function() {
+    toggleButton.addEventListener('click', toggleSideMenu);
+
+    contactUsLink.addEventListener('click', function() {
+        // Закриваємо бокове меню
+        toggleSideMenu();
+        // Затримка перед скролінгом
+        setTimeout(() => {
+            const contactUsSection = document.getElementById('contactUsSection');
+            if (contactUsSection) {
+                contactUsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 500); // Затримка у 500 мілісекунд (0.5 секунди)
+    });
+
+    function toggleSideMenu() {
         const body = document.body;
         const sideMenu = document.querySelector('.sideMenu_header');
         sideMenu.classList.toggle('hide');
 
+        // Перевірка, чи панель відкрита, і встановлення стилів для блокування скролу
         if (!sideMenu.classList.contains('hide')) {
-            scrollPosition = window.pageYOffset; // Зберігаємо поточну позицію скролу
-            body.style.overflow = 'hidden'; // Вимикаємо скрол
-            body.style.position = 'fixed'; // Забороняємо скролінг, але зберігаємо можливість "тапу" по екрану
-            body.style.top = `-${scrollPosition}px`; // Зберігаємо позицію скролу
-            body.style.width = '100%'; // Забезпечуємо, що ширина body не змінюється
+            scrollLock(true);
+        } else {
+            // Відновлення скролу з затримкою, якщо потрібно скролити до Contact Us
+            setTimeout(() => scrollLock(false), 500);
+        }
+    }
+
+    function scrollLock(lock) {
+        const body = document.body;
+        if (lock) {
+            scrollPosition = window.pageYOffset; 
+            body.style.overflow = 'hidden';
+            body.style.position = 'fixed';
+            body.style.top = `-${scrollPosition}px`;
+            body.style.width = '100%';
         } else {
             body.style.removeProperty('overflow');
             body.style.removeProperty('position');
             body.style.removeProperty('top');
             body.style.removeProperty('width');
-            window.scrollTo(0, scrollPosition); // Відновлюємо позицію скролу
+            window.scrollTo(0, scrollPosition);
         }
-    });
+    }
 });

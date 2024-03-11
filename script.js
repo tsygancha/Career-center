@@ -72,6 +72,19 @@ function clearForm() {
     document.getElementById("Phone").value = "";
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Знайдіть кнопку для перемикання бокової панелі
+    const toggleButton = document.querySelector('.sideMenu_toogleOpenSideMenu');
+
+    // Додайте обробник подій для кліку по кнопці
+    toggleButton.addEventListener('click', function() {
+        // Знайдіть елемент бокової панелі
+        const sideMenu = document.querySelector('.sideMenu_header');
+
+        // Перемикайте клас 'hide' для панелі
+        sideMenu.classList.toggle('hide');
+    });
+});
 
 // document.getElementById("contactForm").addEventListener("submit", function(event) {
 //     event.preventDefault();

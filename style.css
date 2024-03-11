@@ -414,6 +414,10 @@ html {
   font-size: 50px;
 }
 
+.sideMenu_whatIsSalesforceImgRight1,.sideMenu_whatIsSalesforceImgLeft1,.sideMenu_whatIsSalesforceImgRight2{
+  display: none;
+}
+
 /* Pricing */
 .pricing {
   display: flex;
@@ -731,14 +735,13 @@ html {
 .sideMenu_header{
   width: 100%;
   position: relative;
-  background: url(/image/sideMenuBC);
+  background: url(/image/sideMenuBC.jpg);
   background-size: cover;
   background-position: center;
   position: absolute;
   top: 0;
   right: 0;
-  /* min-height: 200vh;
-  height: auto; */
+
   height: 100%;
   z-index: 10;
   overflow: hidden;
@@ -798,6 +801,11 @@ html {
   border-radius: 8px;
   width: calc(100% - 30px);
   text-align: center;
+}
+
+.sideMenu_navigation_button.current{
+  font-weight: bold;
+  color: #0094d6;
 }
 
 .navigation_button.contact_us:hover {
@@ -868,6 +876,7 @@ html {
     fill: none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     stroke: #0094d6;
+    /* stroke: #000; */
     stroke-width: 5.5;
     stroke-linecap: round;
   }
@@ -1088,4 +1097,74 @@ html {
     height: 200px;
     border: 1px solidred;
   }
+ 
+  /* WHAT IS SALESFORCE */
+  .whatIsSalesforce {
+    height: 100%;
+  
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 10px;
+  
+    display: flex;
+    justify-content: center;
+    background-image: none;
+  }
+  
+  .whatIsSalesforce_content {
+    width: 1500px;
+    align-items: center;
+    padding: 50px 30px;
+    position: relative;
+  }
+  
+  .textBlock_Solution {
+    color: #ffc000;
+  }
+  
+  .textBlock_Title {
+    font-size: 38px;
+    margin-bottom: 10px;
+    line-height: 45px;
+  }
+  
+  .textBlock_list {
+    list-style-type: circle;
+    padding: 0 35px;
+    font-size: 18px;
+  }
+  
+  .textBlock_waste {
+    margin: 0;
+    margin-top: 240px;
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  .sideMenu_whatIsSalesforceImgRight1{
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 250px;
+
+  }
+
+  .sideMenu_whatIsSalesforceImgLeft1{
+    display: block;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .whatIsSalesforce_TextBlock2{
+    margin-bottom: 125px;
+  }
+
+  .sideMenu_whatIsSalesforceImgRight2{
+    display: block;
+    height: 210px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
 }
+

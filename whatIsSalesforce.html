@@ -30,7 +30,7 @@
         <div class="whatIsSalesforce">
             <div class="whatIsSalesforce_content">
                 <div class="whatIsSalesforce_TextBlock1">
-                    <div class="textBlock_Title">The challenge - blaze your career</div>
+                    <div class="textBlock_Title">The challenge - Blaze your Career!</div>
                     <div class="textBlock_list">
                         <ul>
                             <li>The current job market is tough.</li>
@@ -38,9 +38,11 @@
                         </ul>                    
                     </div>
                 </div>
+                <img class="sideMenu_whatIsSalesforceImgRight1" src="/image/whatIsSalesforceImg1Right.png" alt="">
                 <div class="textBlock_waste">There's no time to waste!</div>
+                <img class="sideMenu_whatIsSalesforceImgLeft1" src="/image/whatIsSalesforceImg1Left.jpg" alt="">
                 <div class="whatIsSalesforce_TextBlock2">
-                    <div class="textBlock_Title">Salesforce can be <span class="textBlock_Solution">the solution</span></div>
+                    <div class="textBlock_Title">Salesforce can be <span class="textBlock_Solution">The Solution</span></div>
                     <div class="textBlock_list">
                         <ul>
                             <li>Salesforce is one of the largesttech companies in the USA.</li>
@@ -50,9 +52,11 @@
                         </ul>                    
                     </div>
                 </div>
+                <img class="sideMenu_whatIsSalesforceImgRight2" src="/image/whatIsSalesforceImg2Right.png" alt="">
             </div>
         </div>
         <div class="contactUsForm" id="contactUsSection">
+            <img class="sideMenu_contactUs_img" src="/image/ContactUsIcon.png" alt="Contact Us Icon">
             <div class="contactUsElement">
                 <div class="contactUs_Section">
                     <div class="contactUs_Title">Contact Us</div>
@@ -83,10 +87,35 @@
             </div>
             <img class="contactUs_img" src="/image/ContactUsIcon.png" alt="Contact Us Icon">
         </div>
-        <div class="footer">
-            <div class="footerContent">©IBVCloud 2024</div>
+        <div class="footerContent">©IBVCloud 2024</div>
+    </div>
+    <div class="sideMenu_header hide">
+        <div class="sideMenu_header_content">
+            <a href="/index.html" class="sideMenu_logo_link">
+                <img class="sideMenu_header_logo_icon" src="/image/headerSiteLogo.png" alt="Career Center Logo">
+                <span>Career Center</span>
+            </a>
+            <div class="sideMenu_logoSeparator"></div>
+            <div class="sideMenu_header_navigationMenu">
+                <a href="/whatIsSalesforce.html" class="sideMenu_navigation_button current">What is Salesforce</a>
+                <a href="/whatWeOffer.html" class="sideMenu_navigation_button ">What we offer</a>
+                <a href="/pricing.html" class="sideMenu_navigation_button">Pricing</a>
+                <a href="/aboutUs.html" class="sideMenu_navigation_button">About Us</a>
+                <a href="#contactUsSection" class="sideMenu_navigation_button contact_us">Contact Us</a>
+            </div>  
+        </div>
+        <div class="sideMenu_footerInfo">
+            ©IBVCloud 2024
         </div>
     </div>
-    <script src="/script.js"></script>
+    <div class="sideMenu_toogleOpenSideMenu">
+        <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path class="line middle"d="m 30,50 h 40" />
+            <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+    </div>
+</div>
+<script src="/script.js"></script>
 </body>
 </html>

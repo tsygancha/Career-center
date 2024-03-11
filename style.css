@@ -762,9 +762,9 @@ html {
 
 .sideMenu_toogleOpenSideMenu{
   position: absolute;
-  top: -18px;
-  right: -12px;
-  transform: scale(0.7); /* Зменшує розмір елемента до 50% */
+  top: -15px;
+  right: -10px;
+  transform: scale(0.8); /* Зменшує розмір елемента до 50% */
   z-index: 10;
 }
 
@@ -1113,7 +1113,7 @@ html {
   .whatIsSalesforce_content {
     width: 1500px;
     align-items: center;
-    padding: 50px 30px;
+    padding: 50px 0 0 30px;
     position: relative;
   }
   
@@ -1135,16 +1135,19 @@ html {
   
   .textBlock_waste {
     margin: 0;
-    margin-top: 240px;
     text-align: center;
     font-size: 50px;
+    padding-right: 30px;
   }
   
+  .sideMenu_whatIsSalesforceImg{
+    height: 250px;
+  }
+
   .sideMenu_whatIsSalesforceImgRight1{
     display: block;
-    position: absolute;
-    right: 0;
-    height: 250px;
+    display: flex;
+    justify-content: end;
 
   }
 
@@ -1152,19 +1155,21 @@ html {
     display: block;
     height: 250px;
     margin: 0 auto;
-  }
-
-  .whatIsSalesforce_TextBlock2{
-    margin-bottom: 125px;
+    padding-right: 30px;
   }
 
   .sideMenu_whatIsSalesforceImgRight2{
     display: block;
+    display: flex;
+    justify-content: end;
+  }
+
+  .sideMenu_whatIsSalesforceImg2{
     height: 210px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+  }
+
+  .whatIsSalesforce_TextBlock1,.whatIsSalesforce_TextBlock2{
+    padding-right: 30px;
   }
 }
 

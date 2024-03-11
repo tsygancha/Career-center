@@ -72,47 +72,36 @@ function clearForm() {
     document.getElementById("Phone").value = "";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Знайдіть кнопку для перемикання бокової панелі
-    const toggleButton = document.querySelector('.sideMenu_toogleOpenSideMenu');
-
-    // Додайте обробник подій для кліку по кнопці
-    toggleButton.addEventListener('click', function() {
-        // Знайдіть елемент бокової панелі
-        const sideMenu = document.querySelector('.sideMenu_header');
-
-        // Перемикайте клас 'hide' для панелі
-        sideMenu.classList.toggle('hide');
-    });
-});
-
-// document.getElementById("contactForm").addEventListener("submit", function(event) {
-//     event.preventDefault();
-
-//     const formData = new FormData(this); 
-
-//     fetch(this.action, {
-//         method: this.method,
-//         body: formData
-//     })
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error("Network response was not ok");
-//         }
-//         return response.json(); 
-//     })
-//     .then(data => {
-//         console.log("Form submitted successfully", data);
-        
-//         clearForm(); 
-//     })
-//     .catch(error => {
-//         console.error("Error submitting form:", error);
+// document.addEventListener("DOMContentLoaded", function() {
+//     const toggleButton = document.querySelector('.sideMenu_toogleOpenSideMenu');
+//     toggleButton.addEventListener('click', function() {
+//         const sideMenu = document.querySelector('.sideMenu_header');
+//         sideMenu.classList.toggle('hide');
 //     });
 // });
 
-// function clearForm() {
-//     document.getElementById("Name").value = "";
-//     document.getElementById("Email").value = "";
-//     document.getElementById("Phone").value = "";
-// }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.querySelector('.sideMenu_toogleOpenSideMenu');
+    let scrollPosition = 0; // Зберігаємо позицію скролу
+
+    toggleButton.addEventListener('click', function() {
+        const body = document.body;
+        const sideMenu = document.querySelector('.sideMenu_header');
+        sideMenu.classList.toggle('hide');
+
+        if (!sideMenu.classList.contains('hide')) {
+            scrollPosition = window.pageYOffset; // Зберігаємо поточну позицію скролу
+            body.style.overflow = 'hidden'; // Вимикаємо скрол
+            body.style.position = 'fixed'; // Забороняємо скролінг, але зберігаємо можливість "тапу" по екрану
+            body.style.top = `-${scrollPosition}px`; // Зберігаємо позицію скролу
+            body.style.width = '100%'; // Забезпечуємо, що ширина body не змінюється
+        } else {
+            body.style.removeProperty('overflow');
+            body.style.removeProperty('position');
+            body.style.removeProperty('top');
+            body.style.removeProperty('width');
+            window.scrollTo(0, scrollPosition); // Відновлюємо позицію скролу
+        }
+    });
+});

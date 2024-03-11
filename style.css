@@ -721,6 +721,12 @@ html {
     display: block;
   }
   
+  .body-no-scroll {
+    overflow: hidden; /* Забороняє прокрутку на body */
+    height: 50vh; /* Опціонально, обмежує висоту body до висоти вікна перегляду */
+    width: 100vw; /* Опціонально, забезпечує, що ширина body не перевищує ширину вікна перегляду */
+}
+
   /* SIDE MENU */
 .sideMenu_header{
   width: 100%;
@@ -736,13 +742,13 @@ html {
   height: 100%;
   z-index: 10;
   overflow: hidden;
-  transition: width 1s ease-in-out;
+  transition: width 0.5s ease-in-out;
   white-space: nowrap;
 }
 
 .hide{
   width: 0;
-  transition: width 1s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 .sideMenu_header_content{
@@ -868,21 +874,22 @@ html {
 
   .sideMenu_footerInfo{
     position: absolute;
-    bottom: 0; /* Вирівнює футер до нижнього краю sideMenu_header */
-    width: 100%; /* Розтягує футер на всю ширину sideMenu_header */
+    bottom: 0; 
+    width: 100%; 
     padding: 20px 0;
     background-color: #000;
     color: #858585;
-    border: none; /* Можете змінити або видалити цей рядок відповідно до ваших потреб */
+    border: none;
     justify-content: center;
     align-items: center;
     text-align: center;    
+    display: none;
   }
 
   /* HOME PAGE MOBILE CONTENT */
 
   .homePageContent {
-    height: 650px;
+    height: 800px;
   
     background-image: url("/image/homePageContentBC.png");
     background-size: cover;

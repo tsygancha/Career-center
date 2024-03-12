@@ -1137,7 +1137,7 @@ html {
   
   .textBlock_list {
     list-style-type: circle;
-    padding: 0 35px;
+    padding: 0 0 0 35px;
     font-size: 18px;
   }
   
@@ -1156,6 +1156,7 @@ html {
     display: block;
     display: flex;
     justify-content: end;
+    padding: 0;
 
   }
 
@@ -1170,6 +1171,7 @@ html {
     display: block;
     display: flex;
     justify-content: end;
+    padding: 0;
   }
 
   .sideMenu_whatIsSalesforceImg2{
@@ -1399,7 +1401,7 @@ html {
   }
   
   .price_salescolud {
-    top: -680px;
+    top: -697px;
     left: -180px;
     width: 95px;
     transform: rotate(345deg);

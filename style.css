@@ -1121,7 +1121,7 @@ html {
   .whatIsSalesforce_content {
     width: 1500px;
     align-items: center;
-    padding: 50px 0 0 30px;
+    padding: 50px 15px;
     position: relative;
   }
   
@@ -1130,14 +1130,13 @@ html {
   }
   
   .textBlock_Title {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 10px;
     line-height: 45px;
   }
   
   .textBlock_list {
     list-style-type: circle;
-    padding: 0 0 0 35px;
     font-size: 18px;
   }
   
@@ -1145,7 +1144,6 @@ html {
     margin: 0;
     text-align: center;
     font-size: 50px;
-    padding-right: 30px;
   }
   
   .sideMenu_whatIsSalesforceImg{
@@ -1153,33 +1151,28 @@ html {
   }
 
   .sideMenu_whatIsSalesforceImgRight1{
-    display: block;
     display: flex;
     justify-content: end;
     padding: 0;
-
   }
 
-  .sideMenu_whatIsSalesforceImgLeft1{
-    display: block;
+  .sideMenu_whatIsSalesforceCenterTeam{
     height: 250px;
-    margin: 0 auto;
-    padding-right: 30px;
   }
 
-  .sideMenu_whatIsSalesforceImgRight2{
+  .sideMenu_whatIsSalesforceCenter{
     display: block;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .sideMenu_whatIsSalesforceCenter{
     display: flex;
-    justify-content: end;
-    padding: 0;
+    justify-content: center;
   }
 
   .sideMenu_whatIsSalesforceImg2{
     height: 210px;
-  }
-
-  .whatIsSalesforce_TextBlock1,.whatIsSalesforce_TextBlock2{
-    padding-right: 30px;
   }
 
   /* WHAT WE OFFER */
@@ -1405,6 +1398,7 @@ html {
     left: -180px;
     width: 95px;
     transform: rotate(345deg);
+    display: none;
   }
   
   .price_certification {

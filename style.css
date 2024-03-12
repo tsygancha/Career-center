@@ -715,6 +715,13 @@ html {
   }
 }
 
+.offerSeparatorIcon{
+  display: none;
+}
+
+.sideMenu_pricing_separator{
+  display: none;
+}
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
@@ -1339,5 +1346,70 @@ html {
     justify-content: center;
   }
   
+  /* PRICING */
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+  }
+  
+  .pricing_sectionTitle {
+    margin: 20px 0;
+    font-size: 40px;
+  }
+  
+  .pricing_list {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .pricing_listItem{
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .pricing_separator {
+    display: none;
+  }
+  
+  .sideMenu_pricing_separator{
+    margin: 15px 0;
+    width: 380px;
+    display: block;
+  }
+  
+  .pricing_specification {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .pricing_icons {
+    position: relative;
+  }
+  
+  .pricing_icon {
+    position: absolute;
+    top: 10px;
+    z-index: -1;
+  }
+  
+  .price_salescolud {
+    top: -692px;
+    left: -203px;
+    width: 95px;
+    transform: rotate(345deg);
+  }
+  
+  .price_certification {
+    top: -116px;
+    left: 712px;
+    width: 289px;
+    display: none;
+  }
 }
 

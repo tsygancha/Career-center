@@ -56,12 +56,17 @@
                     </div>
                     <img class="offer_certificationIcon" src="/image/offer_certificateIcon.png" alt="certificate icon">
                 </div>
+                <div class="offerSeparatorIcon">
+                    <img class="sideMenu_offer_certificationIcon" src="/image/offer_certificateIcon.png" alt="certificate icon">
+                </div>
                 <div class="whatWeOffer_element2">
                     <div class="whatWeOffer_title">Sneak peek</div>
                     <div class="accordionSection">
                         <div class="accordionElement">
                             <div class="elementSection">
-                                <div class="elementPlus"></div>
+                                <div class="plusSeparate">
+                                    <div class="elementPlus"></div>
+                                </div>
                                 <div class="elementTitle">Experience learning that's custom-tailored to your needs, with a focus on the essentials.</div>
                             </div>
                             <div class="elementList hidden">
@@ -72,7 +77,9 @@
                         </div>
                         <div class="accordionElement">
                             <div class="elementSection">
-                                <div class="elementPlus"></div>
+                                <div class="plusSeparate">
+                                    <div class="elementPlus"></div>
+                                </div>                                
                                 <div class="elementTitle">Benefit from personal support and feedback provided by current Salesforce Professionals:</div>
                             </div>
                             <div class="elementList hidden">
@@ -84,7 +91,9 @@
                         </div>
                         <div class="accordionElement">
                             <div class="elementSection">
-                                <div class="elementPlus"></div>
+                                <div class="plusSeparate">
+                                    <div class="elementPlus"></div>
+                                </div>                                
                                 <div class="elementTitle">Engage in one-on-one Q&A sessions with dedicated mentors:</div>
                             </div>
                             <div class="elementList hidden">
@@ -100,7 +109,9 @@
                         </div>
                         <div class="accordionElement">
                             <div class="elementSection">
-                                <div class="elementPlus"></div>
+                                <div class="plusSeparate">
+                                    <div class="elementPlus"></div>
+                                </div>
                                 <div class="elementTitle">Help with Resume and LinkedIn profile building:</div>
                             </div>
                             <div class="elementList hidden">
@@ -111,7 +122,9 @@
                         </div>
                         <div class="accordionElement">
                             <div class="elementSection">
-                                <div class="elementPlus"></div>
+                                <div class="plusSeparate">
+                                    <div class="elementPlus"></div>
+                                </div>
                                 <div class="elementTitle">Help with a job interview:</div>
                             </div>
                             <div class="elementList hidden">
@@ -123,7 +136,9 @@
                         </div>
                         <div class="accordionElement">
                             <div class="elementSection">
-                                <div class="elementPlus"></div>
+                                <div class="plusSeparate">
+                                    <div class="elementPlus"></div>
+                                </div>
                                 <div class="elementTitle">Gain valuable insights on securing your first job from hiring specialists and seasoned Salesforce professionals:</div>
                             </div>
                             <div class="elementList hidden">
@@ -138,6 +153,7 @@
             </div>
         </div>
         <div class="contactUsForm" id="contactUsSection">
+            <img class="sideMenu_contactUs_img" src="/image/ContactUsIcon.png" alt="Contact Us Icon">
             <div class="contactUsElement">
                 <div class="contactUs_Section">
                     <div class="contactUs_Title">Contact Us</div>
@@ -168,10 +184,35 @@
             </div>
             <img class="contactUs_img" src="/image/ContactUsIcon.png" alt="Contact Us Icon">
         </div>
-        <div class="footer">
-            <div class="footerContent">©IBVCloud 2024</div>
+        <div class="footerContent">©IBVCloud 2024</div>
+    </div>
+    <div class="sideMenu_header hide">
+        <div class="sideMenu_header_content">
+            <a href="/index.html" class="sideMenu_logo_link">
+                <img class="sideMenu_header_logo_icon" src="/image/headerSiteLogo.png" alt="Career Center Logo">
+                <span>Career Center</span>
+            </a>
+            <div class="sideMenu_logoSeparator"></div>
+            <div class="sideMenu_header_navigationMenu">
+                <a href="/whatIsSalesforce.html" class="sideMenu_navigation_button">What is Salesforce</a>
+                <a href="/whatWeOffer.html" class="sideMenu_navigation_button current">What we offer</a>
+                <a href="/pricing.html" class="sideMenu_navigation_button">Pricing</a>
+                <a href="/aboutUs.html" class="sideMenu_navigation_button">About Us</a>
+                <a href="#contactUsSection" class="sideMenu_navigation_button contact_us">Contact Us</a>
+            </div>  
+        </div>
+        <div class="sideMenu_footerInfo">
+            ©IBVCloud 2024
         </div>
     </div>
-    <script src="/script.js"></script>
+    <div class="sideMenu_toogleOpenSideMenu">
+        <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path class="line middle"d="m 30,50 h 40" />
+            <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+    </div>
+</div>
+<script src="/script.js"></script>
 </body>
 </html>

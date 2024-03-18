@@ -85,6 +85,10 @@ html {
   font-size: 16px;
 }
 
+  .sideMenu_whatIsSalesforceCenterTeam{
+    display: none;
+  }
+
 .navigation_button,
 .navigation_button.contact_us {
   color: #000;
@@ -723,10 +727,18 @@ html {
   display: none;
 }
 
+.sideMenu_whatIsSalesforceCenterCloud{
+  display: none;
+}
+
 /* Mobile */
 @media only screen and (max-width: 768px) {
   .header{
     display: none;
+  }
+
+  .sideMenu_whatIsSalesforceCenterCloud{
+    display: block;
   }
 
   .sideMenu_header,.sideMenu_toogleOpenSideMenu{
@@ -1158,6 +1170,7 @@ html {
 
   .sideMenu_whatIsSalesforceCenterTeam{
     height: 250px;
+    display: block;
   }
 
   .sideMenu_whatIsSalesforceCenter{
